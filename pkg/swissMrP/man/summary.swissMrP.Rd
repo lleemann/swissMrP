@@ -4,7 +4,7 @@
 \title{Summary Function for \code{swissMrP} Objects
 %%  ~~function to do ... ~~
 }
-\description{Provides the lowest, the two median, and the highest estimates.
+\description{Provides the lowest, the two median, and the highest estimates of public support based on the MrP results.
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
@@ -20,7 +20,7 @@
 }
 
 }
-\author{Lucas Leemann
+\author{Lucas Leemann \email{lleemann@gmail.com}
 %%  ~~who you are~~
 }
 

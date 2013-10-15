@@ -5,7 +5,7 @@
 Multilevel Regression and Post-Stratification for Switzerland
 }
 \description{
-This package provides a number of useful functions to employ MrP for small area prediction in Switzerland. Based on a hierarchical model and survey data one can derive cantonal preference measures. The package allows to automatize the prediction and post-stratification steps. It further provides adequate print, summary, map, and plot functions for objects of its class.
+This package provides a number of useful functions to employ MrP for small area prediction in Switzerland. Based on a hierarchical model (based itself on survey data) one can derive cantonal preference measures. The package allows to automatize the prediction and post-stratification steps. It further provides adequate print, summary, map, and plot functions for objects of its class.
 }
 \details{
 \tabular{ll}{
@@ -26,7 +26,7 @@ Lucas Leemann \email{lleemann@gmail.com}
 	
 	 Leemann, Lucas and Fabio Wasserfallen. 2013. Direct Democracy, Representation, and Policy Congruence. Presented at the \emph{General Conference of the European Political Science Association} Barcelona: June 20-22.
 }
-\note{This package was originally written for students of the University of Zurich (Fall 2013). The funtions and data make this package a useful resource for anybody implementing MrP on Swiss data.
+\note{This package was originally written for students of the University of Zurich (Fall 2013). The functions and data make this package a useful resource for anybody implementing MrP on Swiss data.
 %%  ~~further notes~~
 }
 

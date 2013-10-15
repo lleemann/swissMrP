@@ -22,7 +22,7 @@ map.MrP(x, colors.m, threshold, main, labels = TRUE, legend.text1, legend.text2,
 }
   \item{labels}{Logical. User may specify whether labels should be written automatically or if they should be omitted.
 }
-  \item{legend.text1}{User may specify a legend, e.g. \emph{Support of Death Penalty} to declare what the colors indicate.
+  \item{legend.text1}{User may specify a legend, e.g. \emph{Support Smoking Ban} to declare what the colors indicate.
 %%     ~~Describe \code{col.strength} here~~
 }
   \item{legend.text2}{Like \code{legend.text1}, offers a second line.
@@ -33,9 +33,7 @@ map.MrP(x, colors.m, threshold, main, labels = TRUE, legend.text1, legend.text2,
 }
 }
 
-\details{In the current version this command cannot handle missing values. 
-%%  ~~ If necessary, more details than the description above ~~
-}
+
 \author{Lucas Leemann
 %%  ~~who you are~~
 }

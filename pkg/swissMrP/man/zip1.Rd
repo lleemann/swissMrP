@@ -4,7 +4,7 @@
 \title{Shape Files for Swiss Cantons
 %%   ~~ data name/kind ... ~~
 }
-\description{The shape files for this command are from the Swiss government and can be downloaded here: \url{http://www.bfs.admin.ch/bfs/portal/de/index/dienstleistungen/geostat/datenbeschreibung/generalisierte_gemeindegrenzen.html}. While this function only needs the cantonal boundaries one can also download the shape files for municipality boundaries at the above mentioned URL.
+\description{The shape files are from the Swiss government and can be downloaded here: \url{http://www.bfs.admin.ch/bfs/portal/de/index/dienstleistungen/geostat/datenbeschreibung/generalisierte_gemeindegrenzen.html}.
 %%  ~~ A concise (1-5 lines) description of the dataset. ~~
 }
 \usage{data(zip1)}
