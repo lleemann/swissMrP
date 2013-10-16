@@ -16,7 +16,7 @@ swissMrP(response.model, augment.data = NA, augment.row = 0, uncertainty = FALSE
   \item{response.model}{The output object of \code{glmer} or \code{blmer} where one estimates a hierarchical model with random effects for: \code{age}, \code{education}, \code{gender}, \code{canton}, and \code{region}. One can include any level 2 predictors.
 %%     ~~Describe \code{response.model} here~~
 }
-  \item{augment.data}{In case one uses survey data for the generation of \code{response.model} which does not have any respondents from one or more cantons there is a problem. The function does not know the values of the level 2 explanatory variables in the \code{response.model} and would hence produce NA's or wrong results. Users can supply the missing information as \code{augment.data}. If a canton is missing it will be a vector, if more than one is missing it is a matrix where the number of rows equals the number of missing cantons. For each level 2 variable one adds a column (see example).
+  \item{augment.data}{In case one uses survey data for the generation of \code{response.model} which does not have any respondents from one or more cantons there is a problem. The function does not know the values of the level 2 explanatory variables in the \code{response.model} and would hence produce NA's or wrong results. Users can supply the missing information as \code{augment.data}. If a canton is missing it will be a vector, if more than one is missing it is a matrix where the number of rows equals the number of missing cantons. For each level 2 variable one adds a column (see example) and a preceeding column of 1's.
 %%     ~~Describe \code{augment.data} here~~
 }
   \item{augment.row}{Integer, between 1 and 26. Indicates the row or rows where the \code{augment.data} will be inserted. If data is missing for BE (second canton) and LU (third canton) one will have to supply a vector \code{c(2,3)}.
@@ -66,8 +66,8 @@ model1 <- glmer(y ~ X[,1] +X[,2] + (1|woman)  + (1|education) + (1|age) + (1|can
 # use the MrP function
 mrp1 <- swissMrP(model1)
 
-## Assume model1 would not have any repsondents from JU (cantonnr 26) and x[26,]==c(2,-1)
-#mrp2 <- swissMrP(model1,augment.data=c(2,-1),augment.row=26)
+## Assume model1 would not have any repsondents from JU (cantonnr 26) and x[26,1]=2 and x[26,2]=-1)
+mrp2 <- swissMrP(model1,augment.data=c(1,2,-1),augment.row=26)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

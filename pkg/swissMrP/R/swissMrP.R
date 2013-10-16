@@ -33,7 +33,8 @@ swissMrP <-
     #print(dim22)
     #print(dim21)  
     dimX <- 2
-    dim(dim(model.response@frame)[2])
+    #print((dim(model.response@frame)[2]))
+    #print(dim(data.level2)[2])
     ifelse(dim(model.response@frame)[2]>7, dimX <- dim(data.level2)[2] + 1, dimX <- dimX) #>7
     #print(dimX)
     X2.26 <- matrix(NA,26,dimX)
@@ -41,6 +42,7 @@ swissMrP <-
     # more than one X on L2
     if (dim(model.response@frame)[2]>7){	#>7
       for (ww in 1:26){
+      #	print(colMeans(data.level2[Knr==ww,]))
         X2.26[ww,] <- c(1,colMeans(data.level2[Knr==ww,])) 
       }
     }
