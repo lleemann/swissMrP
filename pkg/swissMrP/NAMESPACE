@@ -2,3 +2,7 @@
 S3method(print, swissMrP)
 S3method(summary, swissMrP)
 S3method(plot, swissMrP)
+
+
+export(swissMrP)
+export(map.MrP)
