@@ -68,6 +68,9 @@ mrp1 <- swissMrP(model1)
 
 ## Assume model1 would not have any repsondents from JU (cantonnr 26) and x[26,1]=2 and x[26,2]=-1)
 mrp2 <- swissMrP(model1,augment.data=c(1,2,-1),augment.row=26)
+
+## Here is an example if two cantons (10,22; FR & VD) are missing
+mrp3 <- swissMrP(model1,augment.data=matrix(c(c(1,2,-1),c(1,1,-5)),2,3, byrow=TRUE),augment.row=c(10,22))
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
