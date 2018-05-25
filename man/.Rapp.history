@@ -1,0 +1,181 @@
+sd <- function(x, ...) UseMethod("sd")#
+## take the usual definition of sd,#
+## and set it to be the default method#
+sd.default <- stats::sd#
+## create a method for our class "foo"#
+sd.foo = function(x, ...) print("Hi")
+formals(sd.default) <- c(formals(sd.default), alist(... = ))
+args(sd.default)
+args(stats::sd)
+bar <- 1:10#
+sd(bar)
+class(bar) <- "foo"#
+sd(bar)
+help(sd)
+library(pscl)
+help(plot.pscl)
+help(pscl)
+help(ideal)
+help(plot.rollcall)
+help(ideal)
+summary.ideal
+help(summary.ideal)
+methods(plot)
+methods(summary)
+print#
+function (x, ...)#
+UseMethod("print")
+a.1 <- 3.1415926#
+class(a.1) <- "my.1"#
+a.2 <- 6.1415926#
+class(a.2) <- "my.2"
+my.fcn <- function(x){#
+  UseMethod("my.usefcn", x)#
+}
+my.fcn(12)
+my.usefcn.my.1 <- function(x){#
+  x + 1#
+}
+my.usefcn.my.2 <- function(x){#
+  x + 2#
+}
+First call#
+my.fcn(a.1)#
+my.fcn(a.2)#
+a.1#
+a.2
+my.fcn(a.2)
+a.1#
+a.2
+print.my.1 <- function(x, digits = 3){#
+  print(unclass(x), digits = digits)#
+}
+print.my.2 <- function(x, digits = 6){#
+  print(unclass(x), digits = digits)#
+}
+my.fcn(a.1)
+my.fcn(a.2)
+print(a.1)
+print(a.2)
+rm(list=ls())
+a.1 <- 3.1415926#
+class(a.1) <- "my.1"
+my.usefcn.my.1 <- function(x){#
+  x + 1#
+}
+my.fcn(a.1)
+my.fcn <- function(x){#
+  UseMethod("my.usefcn", x)#
+}
+my.fcn(a.1)
+load("/Users/lleemann/Desktop/Results_07_11_cluster1.RData")
+objects()
+summary(dataL)
+dataL[[1]]
+summary(dataL)
+rm(list=ls())#
+#
+library(foreign)  					# Packages for data#
+library(mnormt)						# Packages for MVNormal#
+#library(mvtnorm)					# Packages for MVNormal#
+#library(texreg)#
+library(games)#
+library(memisc)#
+#
+data(war1800)#
+f1 <- esc + war ~ s_wt_re1 + revis1 | 0 | regime1 | balanc + regime2#
+##    ^^^^^^^^^   ^^^^^^^^^^^^^^^^^   ^   ^^^^^^^   ^^^^^^^^^^^^^^^^#
+##        y              u11         u13    u14           u24#
+#
+m1 <- egame12(f1, data = war1800)#
+summary(m1)#
+Y <- cbind(war1800$esc, war1800$war)#
+Y[war1800$esc==0,2] <- NA#
+dem1 <- rep(NA, length(war1800$regime1))#
+dem1[war1800$regime1=="dem"] <- 1#
+dem1[war1800$regime1=="mixed"|war1800$regime1=="autoc"] <- 0#
+mixed1 <- rep(NA, length(war1800$regime1))#
+mixed1[war1800$regime1=="mixed"] <- 1#
+mixed1[war1800$regime1=="autoc"|war1800$regime1=="dem"] <- 0#
+#
+dem2 <- rep(NA, length(war1800$regime2))#
+dem2[war1800$regime2=="dem"] <- 1#
+dem2[war1800$regime2=="mixed"|war1800$regime2=="autoc"] <- 0#
+mixed2 <- rep(NA, length(war1800$regime2))#
+mixed2[war1800$regime2=="mixed"] <- 1#
+mixed2[war1800$regime2=="autoc"|war1800$regime2=="dem"] <- 0#
+#
+startval <- rep(0.1,10)#
+startvalues2 <- glm(war1800$war ~  war1800$balanc + dem2 + mixed2 ,family=binomial(link="probit"))$coefficient#
+startval[7:10] <- startvalues2 #
+#
+dataL <- data.frame(cbind(Y[,1],Y[,2], dem1, mixed1, dem2, mixed2, war1800$s_wt_re1, war1800$revis1, war1800$balanc))#
+#
+colnames(dataL) <- c("esc", "war", "dem1", "mixed1", "dem2", "mixed2", "s_wt_re1", "revis1", "balanc")#
+#
+Yy <- dataL[,c(1:2)]#
+Y <- rep(0,length(Yy[,1]))#
+Y[dataL$esc==0] <- 1#
+Y[dataL$esc==1&dataL$war==0] <- 3#
+Y[dataL$esc==1&dataL$war==1] <- 4#
+#
+dataL1 <- cbind(dataL,Y)#
+#
+source("/Users/lleemann/Dropbox/Own Software/builder Stratsel/logLikStratSel.R")#
+source("/Users/lleemann/Dropbox/Own Software/builder Stratsel/logLikStrat.R")#
+source("/Users/lleemann/Dropbox/Own Software/builder Stratsel/StratSel.R")#
+#
+# with good  start values #
+out1 <- StratSel(Y ~ s_wt_re1 + revis1 | dem1 + mixed1 | balanc + dem2 + mixed2, data=dataL1, corr=TRUE)#
+summary(out1)#
+predict(out1)#
+plot(out1, profil=c(1,0,1,0,1,0,1,0,1,0),x.move=5,x.range=c(-2,2))#
+par(mfrow=c(1,3))#
+plot(out1, profil=c(1,0,1,0,1,0,1,0,1,0),x.move=5,x.range=c(-2,2), ci=0.8)#
+plot(out1, profil=c(1,0,1,0,1,0,1,0,1,0),x.move=5,x.range=c(-2,2), plot.nr=c(3,2))
+no correlation#
+out2 <- StratSel(Y ~ s_wt_re1 + revis1 | dem1 + mixed1 | balanc + dem2 + mixed2, data=dataL1, corr=FALSE)#
+summary(out2)#
+par(mfrow=c(1,3))#
+plot(out2, profil=c(1,0,1,0,1,0,1,0,1,0),x.move=5,x.range=c(-2,2), ci=0.8)#
+# with max iterations#
+out3 <- StratSel(Y ~ s_wt_re1 + revis1 | dem1 + mixed1 | balanc + dem2 + mixed2, data=dataL1, corr=TRUE, control=list(REPORT=2, trace=5))#
+summary(out3)#
+out4 <- StratSel(Y ~  revis1 | dem1  | balanc + dem2, data=dataL1, corr=TRUE, Startval=rep(0,8))
+setStratSelDefault()#
+z <- mtable(out1,out2,out3,out4)#
+toLatex(z)
+z
+set.seed(111)#
+n <- 1000#
+x24 <- cbind(rnorm(n), rnorm(n))#
+error <- rmnorm(n,c(0,0),matrix(c(1,0.6,0.6,1),2,2))#
+e24 <- error[,2]#
+y24.latent <-   x24%*%c(1,1) +  e24#
+y2 <- rep(NA,n)#
+y2[y24.latent>0] <- 1#
+y2[y24.latent<0] <- 0#
+mod2 <- glm(y2 ~ x24, family=binomial(link=probit))#
+p24 <- pnorm(predict(mod2))#
+x11 <- cbind(rnorm(n), rnorm(n)) #
+x14 <- cbind(x24[,2],rnorm(n))#
+e14 <- error[,1]#
+y14.latent <- x14%*%c(1,1) * p24 -  x11%*%c(1,1) + e14#
+y1 <- rep(NA,n)#
+y1[y14.latent>0] <- 1#
+y1[y14.latent<0] <- 0#
+Y <- rep(NA,n)#
+Y[y1==0] <- 1#
+Y[y1==1&y2==0] <- 3#
+Y[y1==1&y2==1] <- 4#
+colnames(x11) <- c("var A", "var B")#
+colnames(x14) <- c("var C", "var D")#
+colnames(x24) <- c("var E", "var F")#
+data.fake <- data.frame(Y,x11,x14,x24)
+data(data.fake)#
+out1 <- StratSel(Y ~ var.A + var.B | var.C + var.D | var.E + var.C, data=data.fake, corr=TRUE)#
+out2 <- StratSel(Y ~ var.A | var.C | var.E + var.C, data=data.fake, corr=TRUE)#
+setStratSelDefault()#
+z <- mtable(out1,out2)#
+toLatex(z)
+z
