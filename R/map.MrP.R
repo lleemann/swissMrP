@@ -24,7 +24,7 @@ function(x, colors.m, threshold, main, labels=TRUE, legend.text1, legend.text2, 
 				col.pointer[i] <- max(which(zip1$data[i,1]>threshold))
 				}
 	
-	spplot(zip1, col= colors.m[col.pointer], main=main, ...)
+	plot(zip1, col= colors.m[col.pointer], main=main, ...)
 	title(main=main, line=2)
   
   # legend
