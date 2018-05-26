@@ -174,11 +174,11 @@ swissMrP <-
       preport <- 100*round(rowMeans(phat.canton),3)
       preport <- paste(preport,rep("%",26), sep=" ")
       
-      testi <- rowMeans(phat.canton)
-      if (NaN %in% testi) {
-        alarm <- 1
-        missing.canton <- which(is.na(testi))
-      }
+      #testi <- rowMeans(phat.canton)
+      #if (NaN %in% testi) {
+      #  alarm <- 1
+      #  missing.canton <- which(is.na(testi))
+      #}
       # end of uncertainty==TRUE	
     }
     
@@ -276,11 +276,11 @@ swissMrP <-
       preport <- paste(preport,rep("%",26), sep=" ")
       
       
-      testi <- phat.canton
-      if (NaN %in% testi) {
-        alarm <- 1
-        missing.canton <- which(is.na(testi))
-      }
+      #testi <- phat.canton
+      #if (NaN %in% testi) {
+      #  alarm <- 1
+      #  missing.canton <- which(is.na(testi))
+      #}
       
       # end of uncertainty==FALSE	
     }
