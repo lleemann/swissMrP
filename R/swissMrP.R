@@ -205,7 +205,7 @@ swissMrP <-
       if (length(alpha.re$region[,,1])==7) region.a.block <- alpha.re$region[,,1]
       #### FIX FOR MISSING REGION
       
-      if (length(region.a.block)!=7){
+      if (length(alpha.re$region[,,1])!=7){
         region.a.block <- alpha.re$region[,,1]
         mis.region <- which(!c(1,2,3,4,5,6,7) %in%as.numeric(names(table(model.response@frame$region))))
         region.fix <- rep(0,7)
