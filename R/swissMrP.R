@@ -8,6 +8,7 @@ swissMrP <-
     if (missing(region)) region.pointer <- c(4,2,6,6,6,6,6,5,6,2,2,3,3,5,5,5,5,5,3,5,7,1,1,2,1,2)
     if (missing(region)==FALSE) region.pointer <- region
     
+    
     # read in RESPONSE model
     model.response <- response.model
     beta.fe <- fixef(model.response)
@@ -281,13 +282,21 @@ swissMrP <-
         missing.canton <- which(is.na(testi))
       }
       
-      # end of uncertainty==TRUE	
+      # end of uncertainty==FALSE	
     }
+    
+    if (length(ranef(response.model)$cantonnr[,,1])!=26){
+      alarm <- 1
+      missing.canton <- cantons.name[which(!  c(1:26) %in% as.numeric(rownames(ranef(response.model)$cantonnr)) )]
+    } 
+    
+    
+    
     
     
     if (alarm==1){
       N.missing <- length(as.vector(missing.canton))
-      TEXT <- paste(cantons.name[missing.canton][1:N.missing],sep=" ", collapse=" / ")
+      TEXT <- paste(missing.canton,sep=" ", collapse=" / ")
       print(TEXT)
       writeLines(paste("Your survey model's data not contain any respondents from canton(s):", TEXT, "\n(see option 'augment.data'; Predictions are still made for the other cantons.)", sep=" "))
       
