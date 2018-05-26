@@ -11,6 +11,10 @@ function(x, colors.m, threshold, main, labels=TRUE, legend.text1, legend.text2, 
 		if(missing(colors.m))  	colors.m <- c(rgb(165,0,38,k,maxColorValue=255),rgb(215, 48,39,k,maxColorValue=255), rgb(244, 109, 67,k,maxColorValue=255), rgb(253, 174, 97,k,maxColorValue=255), rgb(254, 224, 139,k,maxColorValue=255), rgb(217, 239, 139,k,maxColorValue=255), rgb(166, 217, 106,k,maxColorValue=255), rgb(102, 189, 99,k,maxColorValue=255), rgb(26, 152, 80,k,maxColorValue=255),rgb(0, 104, 55,k,maxColorValue=255))
 
     if(missing(threshold)) threshold <- seq(0,1,by=1/(length(colors.m)))
+    
+    if(length(x) != 26){
+      x <- rowMeans(x)
+    }
 
 		# reading-in shape files
 		#data("zip1.rda")
