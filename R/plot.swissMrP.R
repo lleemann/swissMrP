@@ -1,5 +1,5 @@
 plot.swissMrP <-
-function(x, conf.int=0.95, col="darkorchid3", design.dot=TRUE, lab, ...){
+function(x, conf.int=0.95, col="black", design.dot=TRUE, lab, ...){
 		uncert <- FALSE
 		if(missing(lab)) lab <- "Degree of Estimated Support"
 		if (length(x)>26) uncert <- TRUE

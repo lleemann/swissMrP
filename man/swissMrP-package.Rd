@@ -12,7 +12,7 @@ This package provides a number of useful functions to employ MrP for small area 
 Package: \tab swissMrP\cr
 Type: \tab Package\cr
 Version: \tab 0.1\cr
-Date: \tab 2013-09-10\cr
+Date: \tab 2018-26-05\cr
 License: \tab GLP-2\cr
 }
 
@@ -24,7 +24,7 @@ Lucas Leemann \email{lleemann@gmail.com}
 	
 	Jeffrey Lax and Justin Phillips. 2009. How Should We Estimate Public Opinion in The States? \emph{American Journal of Political Science} 53 (1), 107-121.
 	
-	 Leemann, Lucas and Fabio Wasserfallen. 2013. Direct Democracy, Representation, and Policy Congruence. Presented at the \emph{General Conference of the European Political Science Association} Barcelona: June 20-22.
+	 Leemann, Lucas and Fabio Wasserfallen. 2016. The Democratic Effect of Direct Democracy. \emph{American Political Science Review} 110(4): 750-762.
 }
 \note{This package was originally written for students of the University of Zurich (Fall 2013). The functions and data make this package a useful resource for anybody implementing MrP on Swiss data.
 %%  ~~further notes~~

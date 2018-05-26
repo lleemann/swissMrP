@@ -94,7 +94,7 @@ swissMrP <-
       #if (dim(ranef(sim.block)$region[,,1])[2]==6) region.a.block <- cbind(ranef(sim.block)$region[,,1],0)
       #### FIX FOR MISSING REGION
       
-      if (length(region.a.block[1,])!=7){
+      if (dim(ranef(sim.block)$region[,,1])[2]!=7){
         mis.region <- which(!c(1,2,3,4,5,6,7) %in%as.numeric(names(table(model.response@frame$region))))
         region.fix <- matrix(0,N.sim, 7)
         b <- 0

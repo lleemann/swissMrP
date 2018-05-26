@@ -40,7 +40,7 @@ swissMrP(response.model, augment.data = NA, augment.row = 0, uncertainty = FALSE
 	
 	Jeffrey Lax and Justin Phillips. 2009. How Should We Estimate Public Opinion in The States? \emph{American Journal of Political Science} 53 (1), 107-121.
 	
-	 Leemann, Lucas and Fabio Wasserfallen. 2013. Direct Democracy, Representation, and Policy Congruence. Presented at the \emph{General Conference of the European Political Science Association} Barcelona: June 20-22.
+	 Leemann, Lucas and Fabio Wasserfallen. 2016. The Democratic Effect of Direct Democracy. \emph{American Political Science Review} 110(4): 750-762.
 }
 \author{
 Lucas Leemann \email{lleemann@gmail.com}

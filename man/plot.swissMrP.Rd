@@ -46,10 +46,10 @@
 # fake data example
 vec <- pnorm(rnorm(26))
 class(vec) <- "swissMrP"
-plot(vec, design.dot=FALSE, main="Distribution will be Uniform", 
+plot(vec, design.dot=FALSE, main="Simulated Data", 
              lab="Heterogeneous Preferences", col="green")
 
-plot(vec, design.dot=TRUE, main="Distribution will be Uniform", 
+plot(vec, design.dot=TRUE, main="Simulated Data", 
              lab="Heterogeneous Preferences", col="blue")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

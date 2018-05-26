@@ -3,6 +3,10 @@ S3method(print, swissMrP)
 S3method(summary, swissMrP)
 S3method(plot, swissMrP)
 
+ importFrom("grDevices", "rgb")
+  importFrom("graphics", "axis", "legend", "plot", "segments", "text",
+             "title")
+  importFrom("stats", "pnorm")
 
 export(swissMrP)
 export(map.MrP)
