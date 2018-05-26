@@ -285,14 +285,16 @@ swissMrP <-
       # end of uncertainty==FALSE	
     }
     
-    if (length(ranef(response.model)$cantonnr[,,1])!=26){
+   
+    
+    
+    
+    
+    
+     if (length(ranef(response.model)$cantonnr[,,1])!=26){
       alarm <- 1
       missing.canton <- cantons.name[which(!  c(1:26) %in% as.numeric(rownames(ranef(response.model)$cantonnr)) )]
     } 
-    
-    
-    
-    
     
     if (alarm==1){
       N.missing <- length(as.vector(missing.canton))
