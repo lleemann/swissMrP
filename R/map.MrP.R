@@ -15,7 +15,7 @@ function(x, colors.m, threshold, main, labels=TRUE, legend.text1, legend.text2, 
 		# reading-in shape files
 		#data("zip1.rda")
 		KT <- zip1$KT
-		data.in <- cbind(x,c(1:26))
+		data.in <- cbind(as.vector(x),c(1:26))
 		data1 <- data.in[KT,]
 		zip1$data <- data1
 		col.pointer <- rep(NA,26)
