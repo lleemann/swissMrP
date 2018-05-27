@@ -10,4 +10,5 @@ You can install the package directly from GitHub using these commands in R:
 library(devtools)
 install_github(“lleemann/swissMrP”)
 ```
-
+## License
+The course content is released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
