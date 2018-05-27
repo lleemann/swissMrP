@@ -5,7 +5,9 @@ This package allows users to employ multilvel regression with post-stratificatio
 ## Installing the swissMrP library
 
 You can install the package directly from GitHub using these commands in R:
+
+```r
 library(devtools)
 install_github(“lleemann/swissMrP”)
-
+```
 
