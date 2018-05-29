@@ -41,7 +41,7 @@ List of 2 Elements
 \source{BfS. Bundesamt fuer Statistik. 
 %%  ~~ reference to a publication or URL from which the data were obtained ~~
 }
-\references{Bundesamt fuer Statistik (BfS). 2000. Eidgenoessische Volkszaehlung 2000; Abschlussbericht zur Volkszaehlung. See also \url{http://www.bfs.admin.ch/bfs/portal/de/index/infothek/erhebungen__quellen/blank/blank/vz/uebersicht.html}.
+\references{Bundesamt fuer Statistik (BfS). 2000. Eidgenoessische Volkszaehlung 2000; Abschlussbericht zur Volkszaehlung.
 %%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
