@@ -1,12 +1,12 @@
 Package: swissMrP
 Type: Package
 Title: Multilevel Regression with Post-Stratification for Switzerland
-Version: 0.6
+Version: 0.62
 Date: 2018-05-25
 Author: Lucas Leemann
 Maintainer: Lucas Leemann <lleemann@gmail.com>
 Depends: R (>= 3.4.0), arm, lme4, maptools, blme, sp, utils
-Description: Provides a number of useful functions to employ MrP for small area prediction in Switzerland. Based on a hierarchical model and survey data one can derive cantonal preference measures. The package allows to automatize the prediction and post-stratification steps. It further provides adequate print, summary, map, and plot functions for objects of its class. 
+Description: Provides a number of useful functions to employ MrP for small area prediction in Switzerland. Based on a hierarchical model and survey data one can derive cantonal preference measures. The package allows to automatize the prediction and post-stratification steps. It further provides adequate print, summary, map, and plot functions for objects of its class (<https://doi.org/10.1111/ajps.12319>). 
 License: GPL-2
 LazyData: true
 LazyLoad: true
