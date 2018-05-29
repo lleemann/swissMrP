@@ -49,13 +49,27 @@ map.MrP(x, colors.m, threshold, main, labels = TRUE, legend.text1, legend.text2,
 # Vanilla example
 fake.pref <- runif(26)
 class(fake.pref) <- "swissMrP"
-\dontrun{map.MrP(fake.pref, main="This Map Shows Random Data", legend.text1="Support for Anything")}
+\dontrun{
+map.MrP(fake.pref, main="This Map Shows Random Data", 
+        legend.text1="Support for Anything")
+        }
 ## changing intervals
-\dontrun{map.MrP(fake.pref, threshold=c(0,0.3,0.45,0.48,0.49,0.5,0.51,0.52,0.55,0.7,1))}
+\dontrun{
+map.MrP(fake.pref, 
+        threshold=c(0,0.3,0.45,0.48,0.49,0.5,0.51,0.52,0.55,0.7,1))
+        }
 ## no labels
-\dontrun{map.MrP(fake.pref, main="This Map Shows Random Data", legend.text1="Support for Anything", labels=FALSE)}
+\dontrun{
+map.MrP(fake.pref, main="This Map Shows Random Data", 
+        legend.text1="Support for Anything", labels=FALSE)
+        }
 ## specify different colors and less groups
-\dontrun{map.MrP(fake.pref, main="This Map Shows Random Data", legend.text1="Support for Anything", colors.m=c("skyblue","skyblue1","skyblue2","skyblue3","slateblue","slateblue1","slateblue2"))}
+\dontrun{
+map.MrP(fake.pref, main="This Map Shows Random Data", 
+        legend.text1="Support for Anything", 
+        colors.m=c("skyblue","skyblue1","skyblue2","skyblue3",
+        "slateblue","slateblue1","slateblue2"))
+        }
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

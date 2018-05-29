@@ -296,6 +296,7 @@ swissMrP <-
       missing.canton <- cantons.name[which(!  c(1:26) %in% as.numeric(rownames(ranef(response.model)$cantonnr)) )]
     } 
     
+    if (length(fixef(response.model))==1) {alarm <- 0}
     if (alarm==1){
       N.missing <- length(as.vector(missing.canton))
       TEXT <- paste(missing.canton,sep=" ", collapse=" / ")
