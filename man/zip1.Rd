@@ -14,7 +14,7 @@
 \details{If you are looking at this help file then chance is that something went wrong :-(
 %%  ~~ If necessary, more details than the __description__ above ~~
 }
-\source{\url{http://www.bfs.admin.ch/bfs/portal/de/index/dienstleistungen/geostat/datenbeschreibung/generalisierte_gemeindegrenzen.html}
+\source{Swiss Federal Statistics Office, 2013.
 %%  ~~ reference to a publication or URL from which the data were obtained ~~
 }
 \examples{

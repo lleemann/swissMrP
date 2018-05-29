@@ -38,7 +38,7 @@ map.MrP(x, colors.m, threshold, main, labels = TRUE, legend.text1, legend.text2,
 %%  ~~who you are~~
 }
 
-\note{The shape files for this command are from the Swiss government and can be downloaded here: \url{http://www.bfs.admin.ch/bfs/portal/de/index/dienstleistungen/geostat/datenbeschreibung/generalisierte_gemeindegrenzen.html}. While this function only needs the cantonal boundaries one can also download the shape files for municipality boundaries at the above mentioned URL. The actual mapping is done with the plot command based on elements from the \code{maptools} package.
+\note{The shape files for this command are from the Swiss government (Swiss Federal Statistics Office, 2013.). While this function only needs the cantonal boundaries one can also download the shape files for municipality boundaries at the above mentioned URL. The actual mapping is done with the plot command based on elements from the \code{maptools} package.
 %%  ~~further notes~~
 }
 \seealso{
