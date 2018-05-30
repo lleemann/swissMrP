@@ -43,7 +43,7 @@
 }
 
 \examples{
-\dontrun{
+\donttest{
 # fake data example
 vec <- pnorm(rnorm(26))
 class(vec) <- "swissMrP"

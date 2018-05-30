@@ -2,7 +2,7 @@
 \alias{swissMrP-package}
 \docType{package}
 \title{
-Multilevel Regression and Post-Stratification for Switzerland
+Multilevel Regression and Post-Stratification (MrP) for Switzerland 
 }
 \description{
 This package provides a number of useful functions to employ MrP for small area prediction in Switzerland. Based on a hierarchical model (based itself on survey data) one can derive cantonal preference measures. The package allows to automatize the prediction and post-stratification steps. It further provides adequate print, summary, map, and plot functions for objects of its class.

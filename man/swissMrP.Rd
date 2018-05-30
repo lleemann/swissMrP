@@ -48,7 +48,7 @@ Lucas Leemann \email{lleemann@gmail.com}
 }
 
 \examples{
-\dontrun{
+\donttest{
 library(lme4)
 ### Fake data
 err.ind <- rnorm(1000,sd=4)
