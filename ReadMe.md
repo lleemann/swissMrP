@@ -1,4 +1,5 @@
 [![CRAN](http://www.r-pkg.org/badges/version-last-release/swissMrP)](http://cran.r-project.org/package=swissMrP)
+[![cranlogs](https://cranlogs.r-pkg.org/badges/grand-total/swissMrP)](http://cran.rstudio.com/web/packages/swissMrP/index.html)
 
 # R library swissMrP
 
