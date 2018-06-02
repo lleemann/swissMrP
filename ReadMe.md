@@ -3,7 +3,8 @@
 
 # R library swissMrP
 
-This package allows users to employ multilevel regression with post-stratification (MrP) to estimate cantonal-level support in Switzerland. The package was written to support my teaching at the University of Zürich. An earleier version was named *MrPzurich2013*.
+The package supports my teaching at the University of Zürich on the use of multilevel modeling of survey data. This package allows users to employ multilevel regression with post-stratification (MrP) to estimate cantonal-level support in Switzerland. An earleier version was named *MrPzurich2013*.
+
 The current version does not cover MrsP (multilevel regression with synthetic post-stratification).
 
 ## Installing the swissMrP library
