@@ -34,7 +34,7 @@ List of 2 Elements
  
  $ INFO             : see \code{census$INFO}
 }
-\details{Education: (1 - if only mandatory school or NA), (2 - Apprenticeship), (3 - High School Diploma or teachers' school), (4 - Higher education, germ: hoehere Fachausbildung), (5 - higher education 2, germ: hoehere Fachschule), (6 - Federal technical Institutes or University of apllied sciences), (7 - University). Age (1: 0-34, 2: 35-49, 3: 50-64, 4: 64-). Woman (0 man, 1 woman).
+\details{Education: (1 - if only mandatory school or NA), (2 - Apprenticeship), (3 - High School Diploma or teachers' school), (4 - Higher education, germ: hoehere Fachausbildung), (5 - higher education 2, germ: hoehere Fachschule), (6 - Federal technical Institutes or University of apllied sciences, University). Age (1: 0-34, 2: 35-49, 3: 50-64, 4: 65-). Woman (0 man, 1 woman).
 
 %%  ~~ If necessary, more details than the __description__ above ~~
 }

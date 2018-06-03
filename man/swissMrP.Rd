@@ -28,7 +28,9 @@ swissMrP(response.model, augment.data = NA, augment.row = 0, uncertainty = FALSE
   \item{Number.sim}{Integer. Number of simulations to be run for uncertainty measure. Default is set to 1000.
 %%     ~~Describe \code{Number.sim} here~~
 }
-  \item{region}{Vector. The regional grouping is based on the large regions in Switzerland (see Leemann and Wasserfallen, 2013). But for certain questions and models alternative groupings could be beneficial. The user can supply a vector (length 26) with integers from 1 to the maximal number of distict regions whereas the first element indicates the regional group of ZH, the second element implies the regional group of BE, ... etc. (it is the standard order of cantons used by the Federal Statistics Office.)
+  \item{region}{Vector. The regional grouping is based on the large regions in Switzerland (see Leemann and Wasserfallen, 2016). But for certain questions and models alternative groupings could be beneficial. The user can supply a vector (length 26) with integers from 1 to the maximal number of distict regions whereas the first element indicates the regional group of ZH, the second element implies the regional group of BE, ... etc. (it is the standard order of cantons used by the Federal Statistics Office.)
+  
+  The default setting is 1 (Geneva, Valais, Vaud), 2 (Bern, Fribourg, Jura, Neuchatel, Solothurn), 3 (Aargau, Basel-Stadt, Basel-Landschaft), 4 (Zurich), 5 (Appenzell I. Rh., Appenzell A. Rh., Glarus, Grisons, St. Gallen, Schaffhausen, Thurgau), 6 (Lucerne, Nidwalden, Obwalden, Schwyz, Uri, Zug), and 7 (Ticino).
 %%     ~~Describe \code{output} here~~
 }
 }

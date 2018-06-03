@@ -1,7 +1,7 @@
 Package: swissMrP
 Type: Package
 Title: Multilevel Regression with Post-Stratification (MrP) for Switzerland
-Version: 0.62
+Version: 0.63
 Date: 2018-05-25
 Author: Lucas Leemann
 Maintainer: Lucas Leemann <lleemann@gmail.com>
