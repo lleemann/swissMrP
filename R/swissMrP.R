@@ -228,7 +228,8 @@ swissMrP <-
       # Help objects for the census information (educ6, age4, woman2)
       education.pointer <- c(rep(1,8),rep(2,8),rep(3,8),rep(4,8),rep(5,8),rep(6,8))		# for each of the 48 SV
       age.pointer <- rep(c(1,1,2,2,3,3,4,4),6)												# ditto
-      woman.pointer <- rep(c(1,2),24)											
+      woman.pointer <- rep(c(1,2),24)	
+      
       
       check.vector <- rep(NA,48) # remember structure of census: educ (6), age (4), woman (2)
       for (i in 1:48){
@@ -238,7 +239,7 @@ swissMrP <-
       # create individual level contribution on latent, 48*26
       ylat.lev1.48.26 <- rep(check.vector, 26)
       
-      # create ceontext level contribution on latent, 48*24
+      # create context level contribution on latent, 48*24
       #print(region.a.block)
       ylat.lev2 <-  X2.26 %*% as.matrix(beta.a.block) + ctnr.a.block   + region.a.block[region.pointer]
       #			ylat.lev2 <-  X2.26 %*% beta.a.block
