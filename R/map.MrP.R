@@ -29,7 +29,7 @@ function(x, colors.m, threshold, main, labels=TRUE, legend.text1, legend.text2, 
 				}
 	
 	sp::plot(zip1, col= colors.m[col.pointer], main=main, ...)
-	title(main=main, line=2)
+	#title(main=main, line=2)
   
   # legend
   if (missing(threshold)==TRUE){
