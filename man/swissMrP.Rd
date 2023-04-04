@@ -65,7 +65,7 @@ y.fake <- X[,1] +X[,2] + woman+age+education+cantonnr+region + err.ind
 y <- rep(0,length(y.fake))
 y[y.fake>mean(y.fake)]<-1
 model1 <- glmer(y ~ X[,1] +X[,2] + (1|woman)  + (1|education) + (1|age) + (1|cantonnr) 
-                + (1|region), family=binomial(probit))
+                + (1|region), family=binomial(link = 'probit'))
 # use the MrP function
 mrp1 <- swissMrP(model1)
 

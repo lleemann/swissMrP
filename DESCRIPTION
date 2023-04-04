@@ -5,7 +5,8 @@ Version: 0.63
 Date: 2018-05-25
 Author: Lucas Leemann
 Maintainer: Lucas Leemann <lleemann@gmail.com>
-Depends: R (>= 3.4.0), arm, lme4, maptools, blme, sp, utils
+Depends: R (>= 3.4.0), arm, lme4, blme, sp, utils
+Suggests: maptools
 Description: Provides a number of useful functions to employ MrP for small area prediction in Switzerland. Based on a hierarchical model and survey data one can derive cantonal preference measures. The package allows to automatize the prediction and post-stratification steps. It further provides adequate print, summary, map, and plot functions for objects of its class. 
 License: GPL-2
 LazyData: true

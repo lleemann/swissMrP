@@ -7,7 +7,7 @@ importFrom("grDevices", "rgb")
 importFrom("graphics", "axis", "legend", "plot", "segments", "text",
              "title")
   importFrom("stats", "pnorm")
-  import("arm", "lme4", "maptools", "blme", "sp")
+  import("arm", "lme4",  "blme", "sp")
 
 
 export(swissMrP)
